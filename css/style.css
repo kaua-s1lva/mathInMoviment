@@ -30,6 +30,7 @@ form button {
     cursor: pointer;
     font-size: var(--font-xl);
     background-color: #fff;
+    
     border: 1px solid #ccc;
     outline: none;
     color: black;
@@ -46,14 +47,14 @@ form button:hover {
 
 @media (max-width: 800px) {
     form {
-        grid-template-columns: repeat(4, 13%);
+        grid-template-columns: repeat(4, 17%);
     }
     form button:hover {
         font-size: var(--font-xl);
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 700px) {
     form {
         grid-template-columns: repeat(4, 23%);
     }
@@ -77,6 +78,7 @@ form button:hover {
     background: #fff;
     font-size: var(--font-xl);
     outline: none;
+    border-radius: 0;
 }
 
 #equacao:focus {
