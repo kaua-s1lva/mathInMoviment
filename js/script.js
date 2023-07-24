@@ -1,3 +1,23 @@
+//RESGATANDO VALORES DOS BUTTONS
+var caracter;
+function clickTeclado (letra) {
+    caracter = letra;
+    mostraValor();
+    escreverValor();
+}
+
+function mostraValor() {
+    console.log('aqui está: ' + caracter);
+}
+
+function escreverValor() {
+    var inputElement = document.getElementById('equacao');
+    inputElement.value += caracter;
+}
+
+
+
+//CALCULANDO O VALOR DO INPUT
 const form = document.querySelector('form');
 
 form.addEventListener('submit', event => {
@@ -7,6 +27,8 @@ form.addEventListener('submit', event => {
     const equacao = (document.querySelector('#equacao')).value;
     console.log(equacao);
 
+    //VERIFICANDO INPUT SE POSSUI MAIS DE 5 CARACTERES
+    if (equacao.length > 5) {
     const termos = equacao.split('');
     for (i = 0; i <= 5; i++) {
         console.log(termos[i]);
@@ -116,4 +138,15 @@ form.addEventListener('submit', event => {
 
     document.getElementById("resultado").innerHTML = resultado;
 
+
+
+    //RESGATANDO VALOR DO BUTTON
+    const numberButtons = (document.querySelector('[data-number]')).value;
+    console.log('valor de button: ' + numberButtons);
+    } else {
+        console.log('ainda não possui mais de 5');
+    }
+
 })
+
+

@@ -11,31 +11,31 @@
 <body>
     <form id="formulario">
         <div class="output">
-            <input type="text" id="equacao" placeholder="Ex: (x+1)2" >
+            <input type="text" id="equacao" placeholder="Ex: (x+1)2" oninput="mostraValor">
             <p id="resultado"></p>
         </div>
-        <button class="span-two">AC</button>
-        <button>DEL</button>
-        <button class="green">(</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="green">)</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="green">+</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="green">-</button>
-        <button>x</button>
-        <button>y</button>
-        <button>z</button>
-        <button type="submit" id="send" class="green">=</button>
-        <button>a</button>
-        <button>b</button>
-        <button>c</button>
+        <button data-all-clear class="span-two" type="reset">AC</button>
+        <button data-delete>DEL</button>
+        <button data-parentheses class="green" value="(" onclick="clickTeclado(this.value);">(</button>
+        <button data-number value="1" onclick="clickTeclado(this.value);">1</button>
+        <button data-number value="2" onclick="clickTeclado(this.value);">2</button>
+        <button data-number value="3" onclick="clickTeclado(this.value);">3</button>
+        <button data-parentheses class="green" value=")" onclick="clickTeclado(this.value);">)</button>
+        <button data-number value="4" onclick="clickTeclado(this.value);">4</button>
+        <button data-number value="5" onclick="clickTeclado(this.value);">5</button>
+        <button data-number value="6" onclick="clickTeclado(this.value);">6</button>
+        <button data-operator class="green" value="+" onclick="clickTeclado(this.value);">+</button>
+        <button data-number value="7" onclick="clickTeclado(this.value);">7</button>
+        <button data-number value="8" onclick="clickTeclado(this.value);">8</button>
+        <button data-number value="9" onclick="clickTeclado(this.value);">9</button>
+        <button data-operator class="green" value="-" onclick="clickTeclado(this.value);">-</button>
+        <button data-unknown value="x" onclick="clickTeclado(this.value);">x</button>
+        <button data-unknown value="y" onclick="clickTeclado(this.value);">y</button>
+        <button data-unknown value="z" onclick="clickTeclado(this.value);">z</button>
+        <button data-equals type="submit" id="send" class="green">=</button>
+        <button data-unknown value="a" onclick="clickTeclado(this.value);">a</button>
+        <button data-unknown value="b" onclick="clickTeclado(this.value);">b</button>
+        <button data-unknown value="c" onclick="clickTeclado(this.value);">c</button>
     </form>
 
     <script src="js/script.js"></script>
